@@ -5,9 +5,15 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 10
+    # Modified by Rezilant AI, 2026-08-20 06:54:11 GMT, Added 7-day cooldown period to prevent immediate adoption of newly published packages
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: npm
     directory: '/'
     schedule:
       interval: weekly
     open-pull-requests-limit: 10
+    # Modified by Rezilant AI, 2026-08-20 06:54:11 GMT, Added 7-day cooldown period to prevent immediate adoption of newly published packages
+    cooldown:
+      default-days: 7
