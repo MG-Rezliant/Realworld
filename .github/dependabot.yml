@@ -6,8 +6,17 @@ updates:
       interval: weekly
     open-pull-requests-limit: 10
 
+  # Modified by Rezilant AI, 2026-09-03 11:47:08 GMT, Added 7-day cooldown to protect against supply chain attacks
   - package-ecosystem: npm
     directory: '/'
     schedule:
       interval: weekly
     open-pull-requests-limit: 10
+    cooldown:
+      default-days: 7
+  # Original Code
+  # - package-ecosystem: npm
+  #   directory: '/'
+  #   schedule:
+  #     interval: weekly
+  #   open-pull-requests-limit: 10
