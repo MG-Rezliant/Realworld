@@ -1,7 +1,13 @@
 version: 2
 updates:
-  # Modified by Rezilant AI, 2026-09-03 11:46:49 GMT, Added cooldown period to mitigate risk of malicious or unstable newly published packages
   - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+
+  # Modified by Rezilant AI, 2026-09-03 11:47:08 GMT, Added 7-day cooldown to protect against supply chain attacks
+  - package-ecosystem: npm
     directory: '/'
     schedule:
       interval: weekly
@@ -9,14 +15,8 @@ updates:
     cooldown:
       default-days: 7
   # Original Code
-  # - package-ecosystem: github-actions
+  # - package-ecosystem: npm
   #   directory: '/'
   #   schedule:
   #     interval: weekly
   #   open-pull-requests-limit: 10
-
-  - package-ecosystem: npm
-    directory: '/'
-    schedule:
-      interval: weekly
-    open-pull-requests-limit: 10
